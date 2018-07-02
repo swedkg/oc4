@@ -1,0 +1,9 @@
+nav {
+  margin-bottom: 1rem !important;
+  a {
+    text-decoration: none;
+    &.active {
+      border-bottom: 1px solid red;
+    }
+  }
+}

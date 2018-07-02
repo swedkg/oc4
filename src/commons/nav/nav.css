@@ -1,0 +1,6 @@
+nav {
+  margin-bottom: 1rem !important; }
+  nav a {
+    text-decoration: none; }
+    nav a.active {
+      border-bottom: 1px solid red; }

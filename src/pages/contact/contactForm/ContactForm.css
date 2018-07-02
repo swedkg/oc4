@@ -1,0 +1,12 @@
+.icon {
+  margin-left: 1rem; }
+
+.send-button {
+  margin-top: 1rem !important; }
+
+.snackbar div {
+  max-width: auto;
+  min-width: auto; }
+  @media (max-width: 959.95px) {
+    .snackbar div {
+      flex-grow: 0; } }

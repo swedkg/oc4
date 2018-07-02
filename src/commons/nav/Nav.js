@@ -1,12 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import Grid from 'material-ui/Grid';
+import './nav.css';
 
 const Nav = () => (
   <Grid component="nav" container={true} spacing={16}>
-    <Grid item component="span"><Link to='/'>Home</Link></Grid>
-    <Grid item component="span"><Link to='/about'>about</Link></Grid>
-    <Grid item component="span"><Link to='/contact'>contact</Link></Grid>
+    <Grid item component="span">
+      <NavLink to='/' exact activeClassName="active">Home</NavLink>
+    </Grid>
+    <Grid item component="span">
+      <NavLink to='/about' activeClassName="active">About</NavLink>
+    </Grid>
+    <Grid item component="span">
+      <NavLink to='/contact' activeClassName="active">Contact</NavLink>
+    </Grid>
   </Grid>
 )
 

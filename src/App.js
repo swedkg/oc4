@@ -6,13 +6,11 @@ import './App.css';
 import CssBaseline from 'material-ui/CssBaseline';
 import Grid from 'material-ui/Grid';
 
-console.log()
-
 const App = () => (
   <CssBaseline>
-    <Grid container={true} className="container">
+    <Grid container className="container">
       <Grid item xs={12}>
-        <Header />
+        {/* <Header /> */}
         <Nav />
         <Main />
       </Grid>
