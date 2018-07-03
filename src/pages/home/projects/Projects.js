@@ -2,7 +2,7 @@ import React from 'react';
 import ProjectsData from './ProjectsData';
 import Grid from 'material-ui/Grid';
 import Modal from 'material-ui/Modal';
-import { Divider, Typography } from 'material-ui';
+import { Typography } from 'material-ui';
 import { withStyles } from 'material-ui/styles';
 import SwipeableViews from 'react-swipeable-views';
 import Tabs, { Tab } from 'material-ui/Tabs';
@@ -34,8 +34,6 @@ function getModalStyle () {
     width: '75vw',
     maxHeight: '90%',
     transform: `translate(-${top}%, -${left}%)`,
-    // display: 'flex',
-    // flexDirection: 'column'
     overflowY: 'auto'
   };
 }
@@ -44,7 +42,6 @@ class Projects extends React.Component {
 
   constructor (props) {
     super(props);
-    // const tabIndex = parseInt(sessionStorage.getItem('tabIndex')) || 0;
     const { currentTab } = props;
     this.state = {
       data: ProjectsData.projects,
@@ -71,9 +68,9 @@ class Projects extends React.Component {
       [...singleProject].forEach(p => {
         arrOfHeights.push(p.offsetHeight);
       })
-      let singleProjectHeight = Math.max(...arrOfHeights);
 
-      let ph = singleProjectHeight * 2 + 150 + 'px';
+      // let singleProjectHeight = Math.max(...arrOfHeights);
+      // let ph = singleProjectHeight * 2 + 150 + 'px';
       let wh = windowHeight - containerDims.top - 50 + 'px';
 
       // reactSwipeableViewContainer[0].style.height = (ph > wh) ? ph : wh;
@@ -244,12 +241,6 @@ class Projects extends React.Component {
               {this.state.modalTitle}
             </Typography>
             <div style={this.getModalImageStyle()}></div>
-            {/* <Typography>
-              Starting date: {this.state.modaldateStart}
-            </Typography>
-            <Typography>
-              Ending date: {this.state.modaldateEnd}
-            </Typography> */}
             <Typography dangerouslySetInnerHTML={{ __html: this.state.modalDescription }}>
             </Typography>
             <Typography>

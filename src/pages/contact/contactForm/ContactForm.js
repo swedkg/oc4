@@ -64,6 +64,7 @@ class ContactForm extends React.Component {
   }
 
   validateEmailAddress (email) {
+    // eslint-disable-next-line
     const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
   }
@@ -155,7 +156,7 @@ class ContactForm extends React.Component {
       if (xhr.readyState < 4)
         console.info("Waiting for response from server...");
       else if (xhr.readyState === 4) {
-        if (xhr.status == 200 && xhr.status < 300) {
+        if (xhr.status === 200 && xhr.status < 300) {
           this.setState({
             snackbarOpen: true,
             snackbarMessage: 'Thank you for your message.'
